@@ -1,9 +1,16 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.Run(async (HttpContext context) =>
+/// MidleWare-1 
+app.Use(async (HttpContext context, RequestDelegate next) =>
 {
     await context.Response.WriteAsync("hello");
+    await next(context);
+});
+/// MidleWare-2
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("hello again");
 });
 
 
