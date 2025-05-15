@@ -5,5 +5,9 @@ app.Run(async (HttpContext context) =>
 {
     await context.Response.WriteAsync("hello");
 });
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("hello");
+});
 
 app.Run();
