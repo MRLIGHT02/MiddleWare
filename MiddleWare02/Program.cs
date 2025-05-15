@@ -8,9 +8,15 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await next(context);
 });
 /// MidleWare-2
-app.Run(async (HttpContext context) =>
+app.Run(async (HttpContext context, RequestDelegate next) =>
 {
     await context.Response.WriteAsync("hello again");
+    await next(context);
+});
+/// MidleWare-3
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("hello again third time");
 });
 
 
