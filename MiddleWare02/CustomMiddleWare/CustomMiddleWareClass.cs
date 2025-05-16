@@ -1,6 +1,7 @@
-﻿namespace MiddleWare02.CustomMiddleWare
+﻿
+namespace MiddleWare02.CustomMiddleWare
 {
-    public class CustomMiddleWareClass
+    public class CustomMiddleWareClass : IMiddleware
     {
     }
 }
