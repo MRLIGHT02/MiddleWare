@@ -5,7 +5,7 @@ namespace MiddleWare02.CustomMiddleWare
     public static class CustomMiddleWareExecention
     {
         // Created Exection Method Of IApplicationBuilder Type
-        public static IApplicationBuilder DoSomething(this IApplicationBuilder app)
+        public static IApplicationBuilder UseCustomMiddleWare(this IApplicationBuilder app)
         {
 
         }
