@@ -4,8 +4,9 @@ namespace MiddleWare02.CustomMiddleWare
 {
     public class CustomMiddleWareClass : IMiddleware
     {
-        public Task InvokeAsync(HttpContext context, RequestDelegate next)
+        public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
+            await context.Response.WriteAsync("Custom MiddleWare Started");
 
         }
     }
