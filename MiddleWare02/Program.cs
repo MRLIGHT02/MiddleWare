@@ -1,4 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
+// Registering The MiddleWare Service
+builder.Services.
+
 var app = builder.Build();
 
 /// MidleWare-1 
