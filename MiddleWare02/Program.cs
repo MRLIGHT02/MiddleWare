@@ -12,7 +12,7 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await next(context);
 });
 /// CustomMiddleware use 
-// app.UseMiddleware<CustomMiddleWareClass>();
+ //app.UseMiddleware<CustomMiddleWareClass>();
 // Using CustomExtions Method To call MiddleWare
 app.UseCustomMiddleWare();
 
