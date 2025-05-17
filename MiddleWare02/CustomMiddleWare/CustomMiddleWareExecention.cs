@@ -6,7 +6,7 @@ namespace MiddleWare02.CustomMiddleWare
     {
         // Created Exection Method Of IApplicationBuilder Type
         public static IApplicationBuilder UseCustomMiddleWare(this IApplicationBuilder app
-            )
+        )
         {
             return app.UseMiddleware<CustomMiddleWareClass>();
         }
