@@ -9,7 +9,9 @@ namespace MiddleWare02.CustomMiddleWare
             await context.Response.WriteAsync("Custom MiddleWare Started");
             await context.Response.WriteAsync("Second Middleware Example of CustomerMiddleWare");
             await next(context);
+            await context.Response.WriteAsync("MiddleWare Execution ");
             await context.Response.WriteAsync("Custom MiddleWare Ended");
+
 
         }
     }
