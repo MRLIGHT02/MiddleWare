@@ -8,7 +8,7 @@ namespace MiddleWare02.CustomMiddleWare
         public static IApplicationBuilder UseCustomMiddleWare(this IApplicationBuilder app
         )
         {
-            return app.UseMiddleware<CustomMiddleWareClass>();
+            return app.UseMiddleware<CustomMiddlWare>();
         }
     }
 }
