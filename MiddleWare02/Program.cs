@@ -2,7 +2,7 @@ using MiddleWare02.CustomMiddleWare;
 
 var builder = WebApplication.CreateBuilder(args);
 // Registering The MiddleWare Service
-builder.Services.AddTransient<CustomMiddleWareClass>();
+builder.Services.AddTransient<CustomMiddlWare>();
 var app = builder.Build();
 
 /// MidleWare-1 
