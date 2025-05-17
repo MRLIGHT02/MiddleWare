@@ -7,6 +7,7 @@ namespace MiddleWare02.CustomMiddleWare
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             await context.Response.WriteAsync("Custom MiddleWare Started");
+            await context.
             await next(context);
             await context.Response.WriteAsync("Custom MiddleWare Ended");
 
