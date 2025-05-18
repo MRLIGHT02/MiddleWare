@@ -18,6 +18,7 @@ namespace MiddleWare02.CustomMiddleWare
         {
             // before logic
             return _next(httpContext);
+            // after logic
         }
     }
 
