@@ -16,7 +16,7 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
 // Using CustomExtions Method To call MiddleWare
 //app.UseCustomMiddleWare();
 //app.UseCustomMiddleWare();
-
+app.UseHelloCustomMiddleWare();
 /// MidleWare-3
 app.Run(async (HttpContext context) =>
 {
