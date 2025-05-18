@@ -16,7 +16,7 @@ namespace MiddleWare02.CustomMiddleWare
 
         public Task Invoke(HttpContext httpContext)
         {
-
+            // before logic
             return _next(httpContext);
         }
     }
