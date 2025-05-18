@@ -14,10 +14,15 @@ namespace MiddleWare02.CustomMiddleWare
             _next = next;
         }
 
-        public Task Invoke(HttpContext httpContext)
+        public async Task Invoke(HttpContext httpContext)
         {
             // before logic
-            return _next(httpContext);
+            if (httpContext.Request.Query.ContainsKey("firstname") && httpContext.Request.Query.ContainsKey("lastname"))
+            {
+                string fullname = httpContext.Request.Query["firstname"] + " " + httpContext.Request.Query["lastname"];
+                await httpContext.Response.WriteAsync(fullname);
+            }
+            await _next(httpContext);
             // after logic
         }
     }
